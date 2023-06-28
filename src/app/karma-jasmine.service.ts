@@ -34,4 +34,38 @@ export class KarmaJasmineService {
     }
   }
 
+ obtenerMaximo(numero1: number, numero2: number) {
+    return Math.max(numero1, numero2);
+  }
+
+  convertirAMayusculas({ cadena }: { cadena: any; }) {
+    return cadena.toUpperCase();
+  }
+
+ esPrimo(numero: number) {
+    if (numero <= 1) {
+      return false;
+    }
+
 }
+
+ esPositivo(numero: number) {
+  if (numero > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+ obtenerNumeroElementos(array) {
+  return array.length;
+
+}
+ verificarSubstring(cadena, substring) {
+  if (cadena.includes(substring)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+}
+

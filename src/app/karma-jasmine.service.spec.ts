@@ -51,6 +51,60 @@ it('calcula el factorial de un número', () => {
 
 
 });
+
+describe('obtenerMaximo', () => {
+  it('debería devolver el número máximo entre dos números', () => {
+    expect(service.obtenerMaximo(5, 10)).toBe(10);
+    expect(service.obtenerMaximo(8, 2)).toBe(8);
+    expect(service.obtenerMaximo(0, 0)).toBe(0);
+    expect(service.obtenerMaximo(-5, -10)).toBe(-5);
+  });
+});
+
+describe('Pruebas para la función esPrimo', () => {
+  it('Debería devolver true para un número primo', () => {
+    expect(service.esPrimo(17)).toBe(true);
+  });
+
+  it('Debería devolver false para un número no primo', () => {
+    expect(service.esPrimo(20)).toBe(false);
+  });
+
+  it('Debería devolver false para el número 1', () => {
+    expect(service.esPrimo(1)).toBe(false);
+  });
+ 
+  describe('esPositivo', () => {
+    it('debería devolver true si el número es positivo', () => {
+      expect(service.esPositivo(5)).toBe(true);
+      expect(service.esPositivo(8)).toBe(true);
+      expect(service.esPositivo(0)).toBe(false);
+      expect(service.esPositivo(-5)).toBe(false);
+    });
+  });
+  describe('obtenerNumeroElementos', () => {
+    it('debería devolver el número correcto de elementos en el array', () => {
+      expect(service.obtenerNumeroElementos([1, 2, 3, 4, 5])).toBe(5);
+      expect(service.obtenerNumeroElementos([])).toBe(0);
+      expect(service.obtenerNumeroElementos(['a', 'b', 'c'])).toBe(3);
+      expect(service.obtenerNumeroElementos([true, false])).toBe(2);
+    });
+
+
+    describe('Pruebas de verificarSubstring', () => {
+      it('Debe devolver true cuando la cadena contiene el substring', () => {
+        const cadena = "Hola, ¿cómo estás?";
+        const substring = "cómo";
+        const resultado = service.verificarSubstring(cadena, substring);
+        expect(resultado).toBe(true);
+      });
+    
+      it('Debe devolver false cuando la cadena no contiene el substring', () => {
+        const cadena = "Hola, ¿cómo estás?";
+        const substring = "adiós";
+        const resultado = service.verificarSubstring(cadena, substring);
+        expect(resultado).toBe(false);
+      });
 });
 
 
@@ -59,3 +113,7 @@ it('calcula el factorial de un número', () => {
 
 
 
+
+  });
+});
+});
