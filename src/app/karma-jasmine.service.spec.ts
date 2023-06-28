@@ -28,4 +28,34 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(5);
   });
 
+
+it('verificar si un número es par', ()=>{
+ 
+  expect(service.esPar(4)).toBe(true);
+  expect(service.esPar(7)).toBe(false);
+
 });
+it('verifica si una cadena es un palíndromo', () => {
+
+  expect(service.esPalindromo("anita lava la tina")).toBe(true);
+  expect(service.esPalindromo("hola mundo")).toBe(false);
+  expect(service.esPalindromo("A man a plan a canal Panama")).toBe(true);
+
+});
+
+it('calcula el factorial de un número', () => {
+
+  expect(service.factorial(5)).toBe(120);
+  expect(service.factorial(0)).toBe(1);
+  expect(service.factorial(10)).toBe(3628800);
+
+
+});
+});
+
+
+
+
+
+
+
