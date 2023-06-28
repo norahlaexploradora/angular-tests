@@ -90,7 +90,7 @@ describe('Pruebas para la función esPrimo', () => {
       expect(service.obtenerNumeroElementos([true, false])).toBe(2);
     });
 
-
+  });
     describe('Pruebas de verificarSubstring', () => {
       it('Debe devolver true cuando la cadena contiene el substring', () => {
         const cadena = "Hola, ¿cómo estás?";
@@ -107,13 +107,20 @@ describe('Pruebas para la función esPrimo', () => {
       });
 });
 
+describe('Pruebas de obtenerPromedio', () => {
+  it('Debe devolver el promedio correcto cuando el array tiene elementos', () => {
+    const numeros = [5, 10, 15, 20, 25];
+    const promedio = service.obtenerPromedio(numeros);
+    expect(promedio).toBe(15);
+  });
 
-
-
-
-
-
+  it('Debe devolver 0 cuando el array está vacío', () => {
+    const numerosVacios = [];
+    const promedioVacio = service.obtenerPromedio(numerosVacios);
+    expect(promedioVacio).toBe(0);
+  });
 
   });
 });
 });
+

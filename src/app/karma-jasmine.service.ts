@@ -67,5 +67,24 @@ export class KarmaJasmineService {
     return false;
   }
 }
+
+obtenerPromedio(array) {
+  if (array.length === 0) {
+    return 0;
+  }
+
+  const suma = array.reduce((acumulador, valor) => acumulador + valor, 0);
+  const promedio = suma / array.length;
+  return promedio;
 }
+
+
+
+}
+
+
+
+
+
+
 
