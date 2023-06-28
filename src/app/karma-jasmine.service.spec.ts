@@ -119,8 +119,22 @@ describe('Pruebas de obtenerPromedio', () => {
     const promedioVacio = service.obtenerPromedio(numerosVacios);
     expect(promedioVacio).toBe(0);
   });
-
+  describe('Pruebas de convertirEnArray', () => {
+    it('Debe convertir una cadena en un array de caracteres', () => {
+     var cadena = 'Hola, mundo!';
+      var resultado = service.convertirEnArray(cadena);
+      expect(resultado).toEqual(['H', 'o', 'l', 'a', ',', ' ', 'm', 'u', 'n', 'd', 'o', '!']);
+    });
   });
+ 
+  describe('Pruebas de calcularSumaDigitos', () => {
+    it('Debe calcular la suma de los dígitos correctamente', () => {
+      const numero = 12345;
+      const sumaDigitos = service.calcularSumaDigitos(numero);
+      expect(sumaDigitos).toBe(15);
+    });
+  });
+});
 });
 });
 

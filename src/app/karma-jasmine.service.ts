@@ -78,8 +78,19 @@ obtenerPromedio(array) {
   return promedio;
 }
 
+convertirEnArray(cadena: string) {
+  return cadena.split('');
+}
+calcularSumaDigitos(numero: Number) {
+  let suma = 0;
+  const numeroString = numero.toString();
 
+  for (let i = 0; i < numeroString.length; i++) {
+    suma += parseInt(numeroString[i]);
+  }
 
+  return suma;
+}
 }
 
 
