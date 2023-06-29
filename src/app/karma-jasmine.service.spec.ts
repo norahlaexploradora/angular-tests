@@ -157,7 +157,14 @@ describe('Cálculo de área de polígono regular', () => {
     expect(service.calcularAreaPoligonoRegular(3, 6, 8)).toBe(72);
   });
 });
-
+describe('Encontrar moda en un array de números', () => {
+  it('Debe encontrar la moda correctamente', () => {
+    expect(service.encontrarModa([1, 2, 3, 4, 4, 5, 5, 5])).toBe(5);
+    expect(service.encontrarModa([1, 2, 2, 3, 3, 3, 4, 4, 4, 4])).toBe(4);
+    expect(service.encontrarModa([5, 5, 5, 5, 5])).toBe(5);
+    expect(service.encontrarModa([1, 2, 3])).toBe(null);
+  });
+});
 
 });
 });

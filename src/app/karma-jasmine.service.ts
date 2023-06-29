@@ -112,13 +112,37 @@ calcularSumaDigitos(numero: Number) {
   }
 }
 calcularAreaPoligonoRegular(apotema, longitudLado, numeroLados) {
-  // Calcula el perímetro del polígono
+ 
   var perimetro = longitudLado * numeroLados;
 
-  // Calcula el área utilizando la fórmula: área = (perímetro * apotema) / 2
+ 
   var area = (perimetro * apotema) / 2;
 
   return area;
 }
 
+
+encontrarModa(array: any[]) {
+  
+  var frecuencias = {};
+
+  
+  array.forEach(function(numero) {
+    frecuencias[numero] = (frecuencias[numero] || 0) + 1;
+  });
+
+  var moda = null;
+  var maxFrecuencia = 0;
+
+  for (var numero in frecuencias) {
+    if (frecuencias.hasOwnProperty(numero)) {
+      if (frecuencias[numero] > maxFrecuencia) {
+        moda = Number(numero);
+        maxFrecuencia = frecuencias[numero];
+      }
+    }
+  }
+
+  return moda;
+}
 }
