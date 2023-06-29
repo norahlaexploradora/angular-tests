@@ -145,4 +145,23 @@ encontrarModa(array: any[]) {
 
   return moda;
 }
+ calcularMedia(array: string | any[]) {
+  var suma = 0;
+
+  for (var i = 0; i < array.length; i++) {
+    suma += array[i];
+  }
+
+  var media = suma / array.length;
+
+  return media;
 }
+
+
+
+
+
+
+}
+
+

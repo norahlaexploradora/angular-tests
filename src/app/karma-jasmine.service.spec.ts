@@ -165,7 +165,11 @@ describe('Encontrar moda en un array de números', () => {
     expect(service.encontrarModa([1, 2, 3])).toBe(null);
   });
 });
-
+describe('Cálculo de la media de un array de números', () => {
+  it('Debe calcular la media correctamente', () => {
+    expect(service.calcularMedia([1, 2, 3, 4, 5, 6])).toBe(3.5);
+  });
+});
 });
 });
 });
