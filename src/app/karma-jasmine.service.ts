@@ -91,11 +91,34 @@ calcularSumaDigitos(numero: Number) {
 
   return suma;
 }
+
+
+ esAnagrama(cadena1, cadena2) {
+ 
+  cadena1 = cadena1.replace(/\s/g, '').toLowerCase();
+  cadena2 = cadena2.replace(/\s/g, '').toLowerCase();
+
+  if (cadena1.length !== cadena2.length) {
+    return false;
+  }
+
+  var ordenada1 = cadena1.split('').sort().join('');
+  var ordenada2 = cadena2.split('').sort().join('');
+
+  if (ordenada1 === ordenada2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+calcularAreaPoligonoRegular(apotema, longitudLado, numeroLados) {
+  // Calcula el perímetro del polígono
+  var perimetro = longitudLado * numeroLados;
+
+  // Calcula el área utilizando la fórmula: área = (perímetro * apotema) / 2
+  var area = (perimetro * apotema) / 2;
+
+  return area;
 }
 
-
-
-
-
-
-
+}

@@ -125,7 +125,7 @@ describe('Pruebas de obtenerPromedio', () => {
       var resultado = service.convertirEnArray(cadena);
       expect(resultado).toEqual(['H', 'o', 'l', 'a', ',', ' ', 'm', 'u', 'n', 'd', 'o', '!']);
     });
-  });
+
  
   describe('Pruebas de calcularSumaDigitos', () => {
     it('Debe calcular la suma de los dígitos correctamente', () => {
@@ -133,8 +133,40 @@ describe('Pruebas de obtenerPromedio', () => {
       const sumaDigitos = service.calcularSumaDigitos(numero);
       expect(sumaDigitos).toBe(15);
     });
+ 
   });
 });
+describe('Pruebas de anagramas', () => {
+  it('Debe retornar true si las cadenas son anagramas', () => {
+    expect(service.esAnagrama('roma', 'amor')).toBe(true);
+    expect(service.esAnagrama('listen', 'silent')).toBe(true);
+  });
+
+  it('Debe retornar false si las cadenas no son anagramas', () => {
+    expect(service.esAnagrama('hello', 'world')).toBe(false);
+    expect(service.esAnagrama('abcd', 'dcbae')).toBe(false);
+
+
+
 });
 });
+describe('Cálculo de área de polígono regular', () => {
+  it('Debe calcular el área correctamente', () => {
+    expect(service.calcularAreaPoligonoRegular(5, 7, 6)).toBe(105);
+    expect(service.calcularAreaPoligonoRegular(8, 10, 4)).toBe(160);
+    expect(service.calcularAreaPoligonoRegular(3, 6, 8)).toBe(72);
+  });
+});
+
+
+});
+});
+});
+
+
+
+
+
+
+
 
